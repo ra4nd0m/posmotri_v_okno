@@ -45,18 +45,22 @@ ol {
   align-items: center;
 }
 
-
+.content__details {
+  margin-bottom: 70px;
+}
 
 .search-form {
   display: flex;
   justify-content: space-between;
+  align-items: end;
   gap: 40px;
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed,Arial, sans-serif;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .content__list {
@@ -65,6 +69,10 @@ ol {
   overflow-y: auto;
   block-size: 300px;
   inline-size: 400px;
+}
+
+.content__list-item {
+  scroll-snap-align: start;
 }
 
 .content__list-item:not(:last-child) {
@@ -131,8 +139,72 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed,Arial, sans-serif;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label {
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__textfield {
+  border-style: solid;
+  border-color: white;
+  border-width: 1px 0;
+  background-color: transparent;
+  color: white;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  inline-size: 225px;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-form__pseudo-checkbox {
+  display: block;
+  outline: 1px solid white;
+  block-size: 19px;
+  inline-size: 19px;
+  appearance: none;
+}
+
+.button {
+  cursor: pointer;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  inline-size: 100%;
+  block-size: 34px;
 }
