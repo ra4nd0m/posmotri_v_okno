@@ -66,7 +66,7 @@ ol {
 .content__list {
   position: relative;
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  overflow-y: auto;
   block-size: 300px;
   inline-size: 400px;
 }
@@ -158,6 +158,9 @@ ol {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -185,7 +188,8 @@ ol {
   width: fit-content;
   cursor: pointer;
   display: flex;
-  gap: 15px;
+  gap: 8px;
+  align-items: center;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -224,15 +228,16 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 14px;
   align-items: center;
+  padding-bottom: 4px;
 }
 
 .search-form__pseudo-checkbox {
   display: block;
   outline: 1px solid white;
-  block-size: 19px;
-  inline-size: 19px;
+  block-size: 17px;
+  inline-size: 17px;
   appearance: none;
 }
 
@@ -277,4 +282,7 @@ ol {
 
 .more-button {
   margin: 2px;
+}
+.search-form__submit-button{
+  inline-size: 194px;
 }
