@@ -162,6 +162,7 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 185px;
 }
 
 .content__video-card-description {
